@@ -1,0 +1,18 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1091,5): warning MSB8027: 名为 main.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 imGUI\main.cpp, main.cpp。
+  main.cpp
+E:\LearnOpenGL\Project1\Project1\main.cpp(22,21): warning C4305: “初始化”: 从“double”到“float”截断
+E:\LearnOpenGL\Project1\Project1\main.cpp(336,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(431,47): warning C4312: “类型强制转换”: 从“unsigned int”转换到更大的“ImTextureID”
+E:\LearnOpenGL\Project1\Project1\main.cpp(753,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(754,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(757,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(758,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(759,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(760,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(789,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(790,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(794,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(795,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(796,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+E:\LearnOpenGL\Project1\Project1\main.cpp(797,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Project1.vcxproj -> E:\LearnOpenGL\Project1\x64\Debug\Project1.exe

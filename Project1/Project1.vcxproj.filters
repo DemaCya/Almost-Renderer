@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="shader">
+      <UniqueIdentifier>{18561b06-34f2-4656-b8f3-5d3d7b99fd66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PBR">
+      <UniqueIdentifier>{046f9b9b-1d78-444c-8c7c-3fa74cc7542c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IBL">
+      <UniqueIdentifier>{f73ac673-7ff9-4afa-9224-31fca6e4ea05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="skybox">
+      <UniqueIdentifier>{617a15c2-450d-4fa3-936c-ca875b534eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IBL\specularIBL">
+      <UniqueIdentifier>{bd8ee6e6-c8d2-430f-ba7f-474a02420f5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IBL\ambientIBL">
+      <UniqueIdentifier>{cd0682b0-a190-47b0-9595-4bcc61bf73bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="tool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\imgui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\imgui_demo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\imgui_draw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\imgui_impl_glfw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\imgui_impl_opengl3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\imgui_tables.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\imgui_widgets.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imGUI\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imgui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imgui_impl_glfw.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imgui_impl_opengl3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imgui_impl_opengl3_loader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imgui_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imstb_rectpack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imstb_textedit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imGUI\imstb_truetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gbuffer.vs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="gbuffer.fs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="ssaoShader.vs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="ssaoShader.fs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="ssaoBlur.vs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="ssaoBlur.fs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="deferred_shading.vs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="deferred_shading.fs">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="PBR.fs">
+      <Filter>PBR</Filter>
+    </None>
+    <None Include="PBR.vs">
+      <Filter>PBR</Filter>
+    </None>
+    <None Include="PBR2.fs">
+      <Filter>PBR</Filter>
+    </None>
+    <None Include="PBRtest.fs">
+      <Filter>PBR</Filter>
+    </None>
+    <None Include="skybox.vs">
+      <Filter>skybox</Filter>
+    </None>
+    <None Include="skybox.fs">
+      <Filter>skybox</Filter>
+    </None>
+    <None Include="prefilterMap.vs">
+      <Filter>IBL\specularIBL</Filter>
+    </None>
+    <None Include="prefilterMap.fs">
+      <Filter>IBL\specularIBL</Filter>
+    </None>
+    <None Include="BRDFlut.fs">
+      <Filter>IBL\specularIBL</Filter>
+    </None>
+    <None Include="BRDFlut.vs">
+      <Filter>IBL\specularIBL</Filter>
+    </None>
+    <None Include="ambientIBL.fs">
+      <Filter>IBL\ambientIBL</Filter>
+    </None>
+    <None Include="ambientIBL.vs">
+      <Filter>IBL\ambientIBL</Filter>
+    </None>
+    <None Include="EquirectangularMaptoCubeMap.fs">
+      <Filter>IBL\ambientIBL</Filter>
+    </None>
+    <None Include="EquirectangularMaptoCubeMap.vs">
+      <Filter>IBL\ambientIBL</Filter>
+    </None>
+    <None Include="iblPBR.vs">
+      <Filter>IBL</Filter>
+    </None>
+    <None Include="iblPBR.fs">
+      <Filter>IBL</Filter>
+    </None>
+    <None Include="testShader.fs">
+      <Filter>shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>
