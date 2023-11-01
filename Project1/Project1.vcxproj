@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -118,7 +118,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(projectDir)imGUI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(projectDir)imGUI;$(projectDir)Animation;$(projectDir)src;$(projectDir)AnimationSrc;$(projectDir)src\OpenFile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +144,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="glad.c" />
     <ClCompile Include="imGUI\imgui.cpp" />
     <ClCompile Include="imGUI\imgui_demo.cpp" />
     <ClCompile Include="imGUI\imgui_draw.cpp" />
@@ -151,12 +151,16 @@
     <ClCompile Include="imGUI\imgui_impl_opengl3.cpp" />
     <ClCompile Include="imGUI\imgui_tables.cpp" />
     <ClCompile Include="imGUI\imgui_widgets.cpp" />
-    <ClCompile Include="imGUI\main.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="tool.cpp" />
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\OpenFile\ImFileDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Animation\Animation.h" />
+    <ClInclude Include="Animation\Animator.h" />
+    <ClInclude Include="Animation\animdata.h" />
+    <ClInclude Include="shader\Animation\anim_model.vs" />
+    <ClInclude Include="Animation\bone.h" />
     <ClInclude Include="imGUI\imconfig.h" />
     <ClInclude Include="imGUI\imgui.h" />
     <ClInclude Include="imGUI\imgui_impl_glfw.h" />
@@ -166,38 +170,86 @@
     <ClInclude Include="imGUI\imstb_rectpack.h" />
     <ClInclude Include="imGUI\imstb_textedit.h" />
     <ClInclude Include="imGUI\imstb_truetype.h" />
-    <ClInclude Include="mesh.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="shader.h" />
-    <ClInclude Include="SOIL.h" />
-    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="src\all_Include.h" />
+    <ClInclude Include="src\AssimpGLMhelpers.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\global_data.h" />
+    <ClInclude Include="src\LTC\ltc_matrix.h" />
+    <ClInclude Include="src\Material.h" />
+    <ClInclude Include="src\mesh.h" />
+    <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\Object3D.h" />
+    <ClInclude Include="src\OpenFile\ImFileDialog.h" />
+    <ClInclude Include="src\PBRRenderPass.h" />
+    <ClInclude Include="src\PBR\config.h" />
+    <ClInclude Include="src\PBR\Irradiance.h" />
+    <ClInclude Include="src\PBR\LUT.h" />
+    <ClInclude Include="src\PBR\prefilter.h" />
+    <ClInclude Include="src\RTX\BVH.h" />
+    <ClInclude Include="src\RTX\Help.h" />
+    <ClInclude Include="src\RTX\RTX.h" />
+    <ClInclude Include="src\Scene.h" />
+    <ClInclude Include="src\shader.h" />
+    <ClInclude Include="src\stb_image.h" />
+    <ClInclude Include="src\utility.h" />
+    <ClInclude Include="src\Window\BottomWindow.h" />
+    <ClInclude Include="src\Window\LeftWindow.h" />
+    <ClInclude Include="src\Window\RenderWindow.h" />
+    <ClInclude Include="src\Window\TopWindow.h" />
+    <ClInclude Include="src\Window\Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ambientIBL.fs" />
-    <None Include="ambientIBL.vs" />
-    <None Include="BRDFlut.fs" />
-    <None Include="BRDFlut.vs" />
-    <None Include="EquirectangularMaptoCubeMap.fs" />
-    <None Include="EquirectangularMaptoCubeMap.vs" />
-    <None Include="iblPBR.fs" />
-    <None Include="iblPBR.vs" />
-    <None Include="PBR.fs" />
-    <None Include="PBR.vs" />
-    <None Include="PBR2.fs" />
-    <None Include="PBRtest.fs" />
-    <None Include="prefilterMap.fs" />
-    <None Include="prefilterMap.vs" />
-    <None Include="skybox.fs" />
-    <None Include="skybox.vs" />
-    <None Include="ssaoBlur.fs" />
-    <None Include="ssaoBlur.vs" />
-    <None Include="ssaoShader.fs" />
-    <None Include="ssaoShader.vs" />
-    <None Include="gbuffer.fs" />
-    <None Include="deferred_shading.fs" />
-    <None Include="deferred_shading.vs" />
-    <None Include="gbuffer.vs" />
-    <None Include="testShader.fs" />
+    <None Include="assimp-vc142-mtd.dll" />
+    <None Include="imGUI\imgui.ini" />
+    <None Include="shader\Animation\1.model_loading.fs" />
+    <None Include="shader\Animation\1.model_loading.vs" />
+    <None Include="shader\Animation\anim_model.fs" />
+    <None Include="shader\IBL\ambientIBL.fs" />
+    <None Include="shader\IBL\ambientIBL.vs" />
+    <None Include="shader\IBL\BRDFlut.fs" />
+    <None Include="shader\IBL\BRDFlut.vs" />
+    <None Include="shader\IBL\EquirectangularMaptoCubeMap.fs" />
+    <None Include="shader\IBL\EquirectangularMaptoCubeMap.vs" />
+    <None Include="shader\IBL\iblPBR.fs" />
+    <None Include="shader\IBL\iblPBR.vs" />
+    <None Include="shader\IBL\finalPBRshader.fs" />
+    <None Include="shader\IBL\prefilterMap.fs" />
+    <None Include="shader\IBL\prefilterMap.vs" />
+    <None Include="shader\LTC\light_plane.fs" />
+    <None Include="shader\LTC\light_plane.vs" />
+    <None Include="shader\LTC\LTC.fs" />
+    <None Include="shader\LTC\LTC.vs" />
+    <None Include="shader\PBR\PBR.fs" />
+    <None Include="shader\PBR\PBR.vs" />
+    <None Include="shader\PBR\PBR2.fs" />
+    <None Include="shader\PBR\PBRtest.fs" />
+    <None Include="shader\plane\plane.fs" />
+    <None Include="shader\plane\plane.vs" />
+    <None Include="shader\RTX\pass1.fs" />
+    <None Include="shader\RTX\pass1_5.fs" />
+    <None Include="shader\RTX\pass2.fs" />
+    <None Include="shader\RTX\RayTracing.vs" />
+    <None Include="shader\skybox\skybox.fs" />
+    <None Include="shader\skybox\skybox.vs" />
+    <None Include="shader\SSAO\deferred_shading.fs" />
+    <None Include="shader\SSAO\deferred_shading.vs" />
+    <None Include="shader\SSAO\gbuffer.fs" />
+    <None Include="shader\SSAO\gbuffer.vs" />
+    <None Include="shader\SSAO\ssaoBlur.fs" />
+    <None Include="shader\SSAO\ssaoBlur.vs" />
+    <None Include="shader\SSAO\ssaoShader.fs" />
+    <None Include="shader\SSAO\ssaoShader.vs" />
+    <None Include="shader\testShader.fs" />
+    <None Include="Texture\newport_loft.hdr" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\RTR_Lincac-master\RTR_Lincac-master\RTR_Lincac\image\texture\grid.png" />
+    <Image Include="Texture\brickwall (1).jpg" />
+    <Image Include="Texture\brickwall.jpg" />
+    <Image Include="Texture\brickwall_normal.jpg" />
+    <Image Include="Texture\container2.png" />
+    <Image Include="Texture\wood.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
