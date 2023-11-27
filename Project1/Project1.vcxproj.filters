@@ -33,12 +33,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="glad.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="tool.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="imGUI\imgui.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -60,32 +54,17 @@
     <ClCompile Include="imGUI\imgui_widgets.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="imGUI\main.cpp">
+    <ClCompile Include="src\glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OpenFile\ImFileDialog.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="mesh.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Model.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="shader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="SOIL.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="stb_image.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="imGUI\imconfig.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -113,82 +92,146 @@
     <ClInclude Include="imGUI\imstb_truetype.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Object3D.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Material.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PBRRenderPass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shader\Animation\anim_model.vs">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\animdata.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AssimpGLMhelpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\bone.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\Animation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation\Animator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window\TopWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\all_Include.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window\Window.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\global_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OpenFile\ImFileDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window\LeftWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window\RenderWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window\BottomWindow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LTC\ltc_matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PBR\config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="gbuffer.vs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="gbuffer.fs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="ssaoShader.vs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="ssaoShader.fs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="ssaoBlur.vs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="ssaoBlur.fs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="deferred_shading.vs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="deferred_shading.fs">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="PBR.fs">
-      <Filter>PBR</Filter>
-    </None>
-    <None Include="PBR.vs">
-      <Filter>PBR</Filter>
-    </None>
-    <None Include="PBR2.fs">
-      <Filter>PBR</Filter>
-    </None>
-    <None Include="PBRtest.fs">
-      <Filter>PBR</Filter>
-    </None>
-    <None Include="skybox.vs">
-      <Filter>skybox</Filter>
-    </None>
-    <None Include="skybox.fs">
-      <Filter>skybox</Filter>
-    </None>
-    <None Include="prefilterMap.vs">
-      <Filter>IBL\specularIBL</Filter>
-    </None>
-    <None Include="prefilterMap.fs">
-      <Filter>IBL\specularIBL</Filter>
-    </None>
-    <None Include="BRDFlut.fs">
-      <Filter>IBL\specularIBL</Filter>
-    </None>
-    <None Include="BRDFlut.vs">
-      <Filter>IBL\specularIBL</Filter>
-    </None>
-    <None Include="ambientIBL.fs">
-      <Filter>IBL\ambientIBL</Filter>
-    </None>
-    <None Include="ambientIBL.vs">
-      <Filter>IBL\ambientIBL</Filter>
-    </None>
-    <None Include="EquirectangularMaptoCubeMap.fs">
-      <Filter>IBL\ambientIBL</Filter>
-    </None>
-    <None Include="EquirectangularMaptoCubeMap.vs">
-      <Filter>IBL\ambientIBL</Filter>
-    </None>
-    <None Include="iblPBR.vs">
-      <Filter>IBL</Filter>
-    </None>
-    <None Include="iblPBR.fs">
-      <Filter>IBL</Filter>
-    </None>
-    <None Include="testShader.fs">
-      <Filter>shader</Filter>
-    </None>
+    <None Include="imGUI\imgui.ini" />
+    <None Include="shader\IBL\ambientIBL.fs" />
+    <None Include="shader\IBL\ambientIBL.vs" />
+    <None Include="shader\IBL\BRDFlut.fs" />
+    <None Include="shader\IBL\BRDFlut.vs" />
+    <None Include="shader\IBL\EquirectangularMaptoCubeMap.fs" />
+    <None Include="shader\IBL\EquirectangularMaptoCubeMap.vs" />
+    <None Include="shader\IBL\iblPBR.fs" />
+    <None Include="shader\IBL\iblPBR.vs" />
+    <None Include="shader\IBL\prefilterMap.fs" />
+    <None Include="shader\IBL\prefilterMap.vs" />
+    <None Include="shader\PBR\PBR.fs" />
+    <None Include="shader\PBR\PBR.vs" />
+    <None Include="shader\PBR\PBR2.fs" />
+    <None Include="shader\PBR\PBRtest.fs" />
+    <None Include="shader\skybox\skybox.fs" />
+    <None Include="shader\skybox\skybox.vs" />
+    <None Include="shader\SSAO\deferred_shading.fs" />
+    <None Include="shader\SSAO\deferred_shading.vs" />
+    <None Include="shader\SSAO\gbuffer.fs" />
+    <None Include="shader\SSAO\gbuffer.vs" />
+    <None Include="shader\SSAO\ssaoBlur.fs" />
+    <None Include="shader\SSAO\ssaoBlur.vs" />
+    <None Include="shader\SSAO\ssaoShader.fs" />
+    <None Include="shader\SSAO\ssaoShader.vs" />
+    <None Include="shader\testShader.fs" />
+    <None Include="Texture\newport_loft.hdr" />
+    <None Include="assimp-vc142-mtd.dll" />
+    <None Include="shader\Animation\anim_model.fs" />
+    <None Include="shader\Animation\1.model_loading.vs" />
+    <None Include="shader\Animation\1.model_loading.fs" />
+    <None Include="shader\IBL\finalPBRshader.fs" />
+    <None Include="shader\plane\plane.vs" />
+    <None Include="shader\plane\plane.fs" />
+    <None Include="shader\LTC\LTC.fs" />
+    <None Include="shader\LTC\LTC.vs" />
+    <None Include="shader\LTC\light_plane.vs" />
+    <None Include="shader\LTC\light_plane.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Texture\brickwall (1).jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Texture\brickwall.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Texture\brickwall_normal.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Texture\container2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Texture\wood.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\RTR_Lincac-master\RTR_Lincac-master\RTR_Lincac\image\texture\grid.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
