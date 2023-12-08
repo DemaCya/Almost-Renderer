@@ -4,13 +4,13 @@
 
 
 
-![fa658eb3f7261db5a8b338c0bc4efaf](D:/WeChat/WeChat Files/wxid_m6ftuhz7358y11/FileStorage/Temp/fa658eb3f7261db5a8b338c0bc4efaf.png)
+![fa658eb3f7261db5a8b338c0bc4efaf](image/1701954700724.jpg)
 
-![3a2d8cb08dccd1e0d36e8535626892d](D:/WeChat/WeChat Files/wxid_m6ftuhz7358y11/FileStorage/Temp/3a2d8cb08dccd1e0d36e8535626892d.png)
+![3a2d8cb08dccd1e0d36e8535626892d](image/1701954764250.jpg)
 
-![98a651b2a6f96351d7b00777580bcf7](D:/WeChat/WeChat Files/wxid_m6ftuhz7358y11/FileStorage/Temp/98a651b2a6f96351d7b00777580bcf7.png)
+![98a651b2a6f96351d7b00777580bcf7](image/fa658eb3f7261db5a8b338c0bc4efaf.png)
 
-![4553f387d5e32748378da1bfc5b5e3a](D:/WeChat/WeChat Files/wxid_m6ftuhz7358y11/FileStorage/Temp/4553f387d5e32748378da1bfc5b5e3a.png)
+![4553f387d5e32748378da1bfc5b5e3a](image/1701955371475.jpg)
 
 
 
@@ -48,7 +48,7 @@ Features：
 
 ## 如何将画面渲染在特定窗口
 
-![image-20231205204210547](C:/Users/Leo/AppData/Roaming/Typora/typora-user-images/image-20231205204210547.png)
+![image-20231205204210547](image/image-20231205204210547.png)
 
 直接上结论：1.项目中加载一个轻量级开源UI项目imGUI。
 
@@ -60,17 +60,17 @@ Features：
 
 我们在github中找到imGUi项目，选择分支中docking的这个
 
-![image-20231205210809100](C:/Users/Leo/AppData/Roaming/Typora/typora-user-images/image-20231205210809100.png)
+![image-20231205210809100](image/image-20231205210809100.png)
 
 我们先在项目中新建一个文件夹，$\textcolor{Red}{确保显示的是文件夹不是筛选器！} $(可以点开项目，点击显示所有文件切换到文件夹)用来储存我们需要的imgui文件。接下来在在我们下载好的i$\textcolor{颜色名}{文字内容} $mgui文件的主目录中将所有.h结尾和.cpp结尾的文件拖到我们的文件夹中
 
-![image-20231205211245301](C:/Users/Leo/AppData/Roaming/Typora/typora-user-images/image-20231205211245301.png)
+![image-20231205211245301](image/image-20231205211245301.png)
 
 再进入backends文件
 
-![image-20231205211345069](C:/Users/Leo/AppData/Roaming/Typora/typora-user-images/image-20231205211345069.png)
+![image-20231205211345069](image/image-20231205211345069.png)
 
-选择这几个文件一样拖入imgui文件夹。然后我们要让imgui文件夹真正导入我们的项目中。在解决方案资源管理器里选中项目，点击属性，点击C/C++，点击附加包含目录最后的箭头打开编辑输入第一行命令后点击确定即可。![image-20231205211714691](C:/Users/Leo/AppData/Roaming/Typora/typora-user-images/image-20231205211714691.png)
+选择这几个文件一样拖入imgui文件夹。然后我们要让imgui文件夹真正导入我们的项目中。在解决方案资源管理器里选中项目，点击属性，点击C/C++，点击附加包含目录最后的箭头打开编辑输入第一行命令后点击确定即可。![image-20231205211714691](image/image-20231205211714691.png)
 
 除此之外，有些必要代码需要放在你的main项目中，一个是在你放的createWindow之后。
 
@@ -101,7 +101,7 @@ ImGui::DestroyContext();//关闭imGUI窗口渲染
 
 具体的可以看看imgui的main.cpp，我们可以运行一下他给的案例，也就是main.cpp
 
-![image-20231205214943662](C:/Users/Leo/AppData/Roaming/Typora/typora-user-images/image-20231205214943662.png)
+![image-20231205214943662](image/image-20231205214943662.png)
 
 可以看到有这样一个窗口，他的代码如下
 
