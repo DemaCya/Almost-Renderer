@@ -4,7 +4,7 @@ out vec4 fragColor;
 
 in vec3 worldPosition;
 in vec3 worldNormal;
-in vec2 texCoord;
+in vec2 texcoord;
 
 struct Light{
 	float intensity;
@@ -19,7 +19,7 @@ uniform vec3 areaLightTranslate;
 struct Material{
 	sampler2D diffuse;
 	vec4 albedoRoughness;
-}
+};
 uniform Material material;
 
 uniform vec3 viewPosition;
@@ -49,7 +49,7 @@ vec3 LTC_Evaluate(vec3 N, vec3 V, vec3 worldPosition, mat3 Minv, vec3 points[4],
 	T1 = normalize(V-N*dot(V,N));
 	T2 = cross(N,T1);
 
-	Minv = Minv*transpose(mat3(T1,T2,T3));
+	Minv = Minv*transpose(mat3(T1,T2,N));
 
 	vec3 L[4];
 
@@ -99,6 +99,8 @@ vec3 PowVec3(vec3 v, float p)
 {
     return vec3(pow(v.x, p), pow(v.y, p), pow(v.z, p));
 }
+const float gamma = 2.2;
+vec3 ToLinear(vec3 v) { return PowVec3(v, gamma); }
 vec3 ToSRGB(vec3 v)   { return PowVec3(v, 1.0/gamma); }
 
 void main(){
@@ -120,7 +122,7 @@ void main(){
 	mat3 Minv = mat3(
 		vec3(t1.x,0,t1.y),
 		vec3(   0,1,   0),
-		vec3(t1.z,0,t1.z);
+		vec3(t1.z,0,t1.z)
 	);
 
 	vec3 translatedPoints[4];

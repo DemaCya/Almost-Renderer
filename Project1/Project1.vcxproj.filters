@@ -173,6 +173,24 @@
     <ClInclude Include="src\PBR\config.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\PBR\Irradiance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PBR\prefilter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PBR\LUT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RTX\RTX.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RTX\Help.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RTX\BVH.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="imGUI\imgui.ini" />
@@ -213,6 +231,10 @@
     <None Include="shader\LTC\LTC.vs" />
     <None Include="shader\LTC\light_plane.vs" />
     <None Include="shader\LTC\light_plane.fs" />
+    <None Include="shader\RTX\RayTracing.vs" />
+    <None Include="shader\RTX\pass1.fs" />
+    <None Include="shader\RTX\pass2.fs" />
+    <None Include="shader\RTX\pass1_5.fs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Texture\brickwall (1).jpg">

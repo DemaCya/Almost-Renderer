@@ -183,6 +183,12 @@
     <ClInclude Include="src\OpenFile\ImFileDialog.h" />
     <ClInclude Include="src\PBRRenderPass.h" />
     <ClInclude Include="src\PBR\config.h" />
+    <ClInclude Include="src\PBR\Irradiance.h" />
+    <ClInclude Include="src\PBR\LUT.h" />
+    <ClInclude Include="src\PBR\prefilter.h" />
+    <ClInclude Include="src\RTX\BVH.h" />
+    <ClInclude Include="src\RTX\Help.h" />
+    <ClInclude Include="src\RTX\RTX.h" />
     <ClInclude Include="src\Scene.h" />
     <ClInclude Include="src\shader.h" />
     <ClInclude Include="src\stb_image.h" />
@@ -220,6 +226,10 @@
     <None Include="shader\PBR\PBRtest.fs" />
     <None Include="shader\plane\plane.fs" />
     <None Include="shader\plane\plane.vs" />
+    <None Include="shader\RTX\pass1.fs" />
+    <None Include="shader\RTX\pass1_5.fs" />
+    <None Include="shader\RTX\pass2.fs" />
+    <None Include="shader\RTX\RayTracing.vs" />
     <None Include="shader\skybox\skybox.fs" />
     <None Include="shader\skybox\skybox.vs" />
     <None Include="shader\SSAO\deferred_shading.fs" />

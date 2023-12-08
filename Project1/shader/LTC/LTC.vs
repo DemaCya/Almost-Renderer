@@ -19,6 +19,6 @@ void main(){
 	worldNormal = normalMatrix*aNormal;
 	texcoord = aTexcoord;
 
-	glPosition = projection * view * worldPos;
+	gl_Position = projection * view * worldPos;
 }
 

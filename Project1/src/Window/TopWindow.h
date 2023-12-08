@@ -39,6 +39,18 @@ public:
                 }
                 ImGui::EndMenu();
             }
+            if (ImGui::BeginMenu("Scene")) {
+                if (ImGui::MenuItem("IBL")) {
+                    scene_index = IBL;
+                }
+                if (ImGui::MenuItem("LTC")) {
+                    scene_index = LTC;
+                }
+                if (ImGui::MenuItem("RTX")) {
+                    scene_index = RTX;
+                }
+                ImGui::EndMenu();
+            }
             
             ImGui::EndMainMenuBar();
         }
